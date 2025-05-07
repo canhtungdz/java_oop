@@ -1,5 +1,6 @@
 package hus.oop.lab9.exercise2.ex3;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -18,9 +19,8 @@ public abstract class AbstractPoly implements Poly {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Poly)) return false;
-        Poly poly = (Poly) o;
-        return Objects.equals(coefficients(), poly.coefficients());
+        if (!(o instanceof Poly poly)) return false;
+        return Arrays.equals(coefficients(), poly.coefficients());
     }
 
     @Override
